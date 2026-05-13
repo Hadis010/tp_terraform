@@ -6,7 +6,7 @@ resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
   enable_dns_support   = true
-  tags = { Name = "${var.project_name}-vpc" }
+  tags                 = { Name = "${var.project_name}-vpc" }
 }
 
 resource "aws_internet_gateway" "main" {
@@ -19,7 +19,7 @@ resource "aws_subnet" "public" {
   cidr_block              = var.public_subnet_cidr
   availability_zone       = data.aws_availability_zones.available.names[0]
   map_public_ip_on_launch = true
-  tags = { Name = "${var.project_name}-public-subnet" }
+  tags                    = { Name = "${var.project_name}-public-subnet" }
 }
 
 resource "aws_route_table" "public" {
@@ -81,27 +81,12 @@ resource "aws_key_pair" "deployer" {
   public_key = file("~/.ssh/tp_terraform.pub")
 }
 
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  owners      = ["099720109477"]
-  filter {
-    name   = "image-id"
-    values = ["ami-0adb8ca49015e0901"]
-  }
-}
-
 resource "aws_instance" "web" {
-  ami                    = data.aws_ami.ubuntu.id
+  ami                    = "ami-0adb8ca49015e0901"
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.web.id]
   key_name               = aws_key_pair.deployer.key_name
-
-  root_block_device {
-    volume_size = 20
-    volume_type = "gp3"
-    encrypted   = true
-  }
 
   tags = { Name = "${var.project_name}-web" }
 }
