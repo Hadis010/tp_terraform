@@ -22,3 +22,11 @@ resource "github_repository" "docs" {
   auto_init   = true
   topics      = ["terraform", "devops"]
 }
+
+resource "github_repository" "existing" {
+  name          = "tp_terraform"
+  has_issues    = true
+  has_projects  = true
+  has_wiki      = true
+  has_downloads = true
+}
