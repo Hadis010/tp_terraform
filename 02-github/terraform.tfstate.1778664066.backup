@@ -1,0 +1,329 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.2",
+  "serial": 11,
+  "lineage": "420e42a5-b8fc-9ca0-14b3-edd5f4b23342",
+  "outputs": {
+    "repository_name": {
+      "value": "tp-terraform-demo",
+      "type": "string"
+    },
+    "repository_url": {
+      "value": "https://github.com/Hadis010/tp-terraform-demo",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "github_actions_secret",
+      "name": "db_url",
+      "provider": "provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "created_at": "2026-05-13 08:47:47 +0000 UTC",
+            "destroy_on_drift": null,
+            "encrypted_value": null,
+            "id": "tp-terraform-demo:DATABASE_URL",
+            "key_id": "3380204578043523366",
+            "plaintext_value": "postgresql://user:pass@localhost/mydb",
+            "remote_updated_at": "2026-05-13 08:47:47 +0000 UTC",
+            "repository": "tp-terraform-demo",
+            "repository_id": 1237509611,
+            "secret_name": "DATABASE_URL",
+            "updated_at": "2026-05-13 08:47:47 +0000 UTC",
+            "value": null,
+            "value_encrypted": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "encrypted_value"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "plaintext_value"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "value"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "value_encrypted"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjIifQ==",
+          "dependencies": [
+            "github_repository.app"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "github_repository",
+      "name": "app",
+      "provider": "provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "allow_auto_merge": false,
+            "allow_forking": true,
+            "allow_merge_commit": true,
+            "allow_rebase_merge": true,
+            "allow_squash_merge": true,
+            "allow_update_branch": false,
+            "archive_on_destroy": null,
+            "archived": false,
+            "auto_init": true,
+            "default_branch": "main",
+            "delete_branch_on_merge": false,
+            "description": "Dépôt géré par Terraform - DevOps S8",
+            "etag": "W/\"560110242bf8bb4a8534bf3ae2fb6e7ae10f85b61c4834c589e42024b18e654d\"",
+            "fork": "false",
+            "full_name": "Hadis010/tp-terraform-demo",
+            "git_clone_url": "git://github.com/Hadis010/tp-terraform-demo.git",
+            "gitignore_template": null,
+            "has_discussions": false,
+            "has_downloads": false,
+            "has_issues": true,
+            "has_projects": false,
+            "has_wiki": false,
+            "homepage_url": "",
+            "html_url": "https://github.com/Hadis010/tp-terraform-demo",
+            "http_clone_url": "https://github.com/Hadis010/tp-terraform-demo.git",
+            "id": "tp-terraform-demo",
+            "ignore_vulnerability_alerts_during_read": false,
+            "is_template": false,
+            "license_template": null,
+            "merge_commit_message": "PR_TITLE",
+            "merge_commit_title": "MERGE_MESSAGE",
+            "name": "tp-terraform-demo",
+            "node_id": "R_kgDOScLl6w",
+            "pages": [],
+            "primary_language": "",
+            "private": false,
+            "repo_id": 1237509611,
+            "security_and_analysis": [
+              {
+                "advanced_security": [],
+                "code_security": [],
+                "secret_scanning": [
+                  {
+                    "status": "enabled"
+                  }
+                ],
+                "secret_scanning_ai_detection": [],
+                "secret_scanning_non_provider_patterns": [],
+                "secret_scanning_push_protection": [
+                  {
+                    "status": "enabled"
+                  }
+                ]
+              }
+            ],
+            "source_owner": "",
+            "source_repo": "",
+            "squash_merge_commit_message": "COMMIT_MESSAGES",
+            "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+            "ssh_clone_url": "git@github.com:Hadis010/tp-terraform-demo.git",
+            "svn_url": "https://github.com/Hadis010/tp-terraform-demo",
+            "template": [],
+            "topics": [
+              "devops",
+              "s8",
+              "terraform"
+            ],
+            "visibility": "public",
+            "vulnerability_alerts": false,
+            "web_commit_signoff_required": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "github_repository",
+      "name": "docs",
+      "provider": "provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "allow_auto_merge": false,
+            "allow_forking": true,
+            "allow_merge_commit": true,
+            "allow_rebase_merge": true,
+            "allow_squash_merge": true,
+            "allow_update_branch": false,
+            "archive_on_destroy": null,
+            "archived": false,
+            "auto_init": true,
+            "default_branch": "main",
+            "delete_branch_on_merge": false,
+            "description": "Documentation - géré par Terraform",
+            "etag": "W/\"60c85e03432556a8f8db031025fd9dd70077ae07d4d31e5a242d93282b332dd4\"",
+            "fork": "false",
+            "full_name": "Hadis010/tp-terraform-docs",
+            "git_clone_url": "git://github.com/Hadis010/tp-terraform-docs.git",
+            "gitignore_template": null,
+            "has_discussions": false,
+            "has_downloads": false,
+            "has_issues": false,
+            "has_projects": false,
+            "has_wiki": true,
+            "homepage_url": "",
+            "html_url": "https://github.com/Hadis010/tp-terraform-docs",
+            "http_clone_url": "https://github.com/Hadis010/tp-terraform-docs.git",
+            "id": "tp-terraform-docs",
+            "ignore_vulnerability_alerts_during_read": false,
+            "is_template": false,
+            "license_template": null,
+            "merge_commit_message": "PR_TITLE",
+            "merge_commit_title": "MERGE_MESSAGE",
+            "name": "tp-terraform-docs",
+            "node_id": "R_kgDOScMKtQ",
+            "pages": [],
+            "primary_language": "",
+            "private": false,
+            "repo_id": 1237519029,
+            "security_and_analysis": [
+              {
+                "advanced_security": [],
+                "code_security": [],
+                "secret_scanning": [
+                  {
+                    "status": "enabled"
+                  }
+                ],
+                "secret_scanning_ai_detection": [],
+                "secret_scanning_non_provider_patterns": [],
+                "secret_scanning_push_protection": [
+                  {
+                    "status": "enabled"
+                  }
+                ]
+              }
+            ],
+            "source_owner": "",
+            "source_repo": "",
+            "squash_merge_commit_message": "COMMIT_MESSAGES",
+            "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+            "ssh_clone_url": "git@github.com:Hadis010/tp-terraform-docs.git",
+            "svn_url": "https://github.com/Hadis010/tp-terraform-docs",
+            "template": [],
+            "topics": [
+              "devops",
+              "terraform"
+            ],
+            "visibility": "public",
+            "vulnerability_alerts": false,
+            "web_commit_signoff_required": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "github_repository",
+      "name": "existing",
+      "provider": "provider[\"registry.terraform.io/integrations/github\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "allow_auto_merge": false,
+            "allow_forking": true,
+            "allow_merge_commit": true,
+            "allow_rebase_merge": true,
+            "allow_squash_merge": true,
+            "allow_update_branch": false,
+            "archive_on_destroy": null,
+            "archived": false,
+            "auto_init": false,
+            "default_branch": "main",
+            "delete_branch_on_merge": false,
+            "description": "",
+            "etag": "W/\"eb2497f189e20b87df6976b7c8f5bc9846f8198d58ab33428db6c26d551de757\"",
+            "fork": "false",
+            "full_name": "Hadis010/tp_terraform",
+            "git_clone_url": "git://github.com/Hadis010/tp_terraform.git",
+            "gitignore_template": null,
+            "has_discussions": false,
+            "has_downloads": true,
+            "has_issues": true,
+            "has_projects": true,
+            "has_wiki": true,
+            "homepage_url": "",
+            "html_url": "https://github.com/Hadis010/tp_terraform",
+            "http_clone_url": "https://github.com/Hadis010/tp_terraform.git",
+            "id": "tp_terraform",
+            "ignore_vulnerability_alerts_during_read": null,
+            "is_template": false,
+            "license_template": null,
+            "merge_commit_message": "PR_TITLE",
+            "merge_commit_title": "MERGE_MESSAGE",
+            "name": "tp_terraform",
+            "node_id": "R_kgDOScHiVQ",
+            "pages": [],
+            "primary_language": "HCL",
+            "private": false,
+            "repo_id": 1237443157,
+            "security_and_analysis": [
+              {
+                "advanced_security": [],
+                "code_security": [],
+                "secret_scanning": [
+                  {
+                    "status": "enabled"
+                  }
+                ],
+                "secret_scanning_ai_detection": [],
+                "secret_scanning_non_provider_patterns": [],
+                "secret_scanning_push_protection": [
+                  {
+                    "status": "enabled"
+                  }
+                ]
+              }
+            ],
+            "source_owner": "",
+            "source_repo": "",
+            "squash_merge_commit_message": "COMMIT_MESSAGES",
+            "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+            "ssh_clone_url": "git@github.com:Hadis010/tp_terraform.git",
+            "svn_url": "https://github.com/Hadis010/tp_terraform",
+            "template": [],
+            "topics": [],
+            "visibility": "public",
+            "vulnerability_alerts": false,
+            "web_commit_signoff_required": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
