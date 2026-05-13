@@ -9,3 +9,9 @@ variable "host_port" {
   type        = number
   default     = 8080
 }
+
+variable "nginx_image" {
+  description = "Image nginx à utiliser"
+  type        = string
+  default     = "nginx:alpine"
+}

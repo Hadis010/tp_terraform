@@ -1,5 +1,5 @@
 resource "docker_image" "nginx" {
-  name = "nginx:alpine"
+  name = var.nginx_image
 }
 
 resource "docker_network" "app" {
