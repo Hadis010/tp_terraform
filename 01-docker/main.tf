@@ -19,3 +19,16 @@ resource "docker_container" "web" {
     name = docker_network.app.name
   }
 }
+
+resource "docker_image" "redis" {
+  name = "redis:alpine"
+}
+
+resource "docker_container" "cache" {
+  name  = "${var.project_name}-cache"
+  image = docker_image.redis.image_id
+
+  networks_advanced {
+    name = docker_network.app.name
+  }
+}
