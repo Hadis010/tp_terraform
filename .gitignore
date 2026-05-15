@@ -4,3 +4,8 @@
 terraform.tfstate.*.backup
 *.tfplan
 *.auto.tfvars
+
+# Terraform local values
+terraform.tfvars
+*.auto.tfvars
+
