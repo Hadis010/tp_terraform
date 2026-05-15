@@ -17,3 +17,8 @@ output "ssh_command" {
   description = "Commande SSH pour se connecter"
   value       = "ssh -i ~/.ssh/tp_terraform ubuntu@${aws_instance.web.public_ip}"
 }
+
+output "bucket_name" {
+  description = "Nom du bucket S3"
+  value       = aws_s3_bucket.assets.bucket
+}
