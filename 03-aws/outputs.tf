@@ -22,3 +22,7 @@ output "bucket_name" {
   description = "Nom du bucket S3"
   value       = aws_s3_bucket.assets.bucket
 }
+output "alb_dns_name" {
+  description = "DNS public de l'Application Load Balancer"
+  value       = aws_lb.web.dns_name
+}
