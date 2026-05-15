@@ -46,3 +46,21 @@ variable "my_ip" {
   description = "Votre IP publique pour SSH (format x.x.x.x/32)"
   type        = string
 }
+
+variable "db_name" {
+  description = "Nom de la base PostgreSQL"
+  type        = string
+  default     = "appdb"
+}
+
+variable "db_username" {
+  description = "Utilisateur PostgreSQL"
+  type        = string
+  default     = "appuser"
+}
+
+variable "db_password" {
+  description = "Mot de passe PostgreSQL"
+  type        = string
+  sensitive   = true
+}
